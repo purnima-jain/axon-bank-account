@@ -10,6 +10,10 @@
 	</parent>
 
 	<artifactId>query-model</artifactId>
+	
+	<properties>
+		<mysql.version>8.0.20</mysql.version>
+	</properties>
 
 	<dependencies>
 		<!-- BEGIN: Spring-Data-JPA -->
@@ -19,13 +23,13 @@
 		</dependency>
 		<!-- END: Spring-Data-JPA -->
 
-		<!-- BEGIN: H2 Database -->
+		<!-- BEGIN: MySQL -->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
 		</dependency>
-		<!-- END: H2 Database -->
+		<!-- END: MySQL -->
 		
 		<!-- BEGIN: Lombok -->
 		<dependency>
