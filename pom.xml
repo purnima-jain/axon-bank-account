@@ -39,6 +39,13 @@
 			<version>${axon-starter.version}</version>
 		</dependency>
 		<!-- END: Axon -->
+		
+		<!-- BEGIN: Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+		<!-- END: Lombok -->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -53,6 +60,7 @@
 		<module>command-model</module>
 		<module>query-model</module>
 		<module>history-model</module>
+		<module>custom-history-model</module>
 	</modules>
 
 	<build>

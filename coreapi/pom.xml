@@ -11,15 +11,4 @@
 
 	<artifactId>coreapi</artifactId>
 
-	<dependencies>
-
-		<!-- BEGIN: Lombok -->
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-		</dependency>
-		<!-- END: Lombok -->
-
-	</dependencies>
-
 </project>

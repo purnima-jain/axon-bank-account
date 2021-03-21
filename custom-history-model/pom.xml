@@ -9,9 +9,24 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>history-model</artifactId>
+	<artifactId>custom-history-model</artifactId>
 
 	<dependencies>
+	
+		<!-- BEGIN: Spring-Data-JPA -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- END: Spring-Data-JPA -->
+
+		<!-- BEGIN: MySQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.version}</version>
+		</dependency>
+		<!-- END: MySQL -->
 
 		<dependency>
 			<groupId>com.purnima.jain</groupId>

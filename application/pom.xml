@@ -30,6 +30,12 @@
 			<artifactId>history-model</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.purnima.jain</groupId>
+			<artifactId>custom-history-model</artifactId>
+			<version>${project.version}</version>
+		</dependency>
 
 	</dependencies>
 </project>
