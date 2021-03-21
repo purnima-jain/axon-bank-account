@@ -15,18 +15,18 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/bank-accounts")
 @Slf4j
 public class AccountController {
-	
+
 	private final AccountService accountService;
-	
+
 	public AccountController(AccountService accountService) {
 		this.accountService = accountService;
 	}
-	
+
 	@GetMapping("/{accountNumber}")
 	public AccountResponseDto findById(@PathVariable("accountNumber") String accountNumber) {
 		log.info("Inside the AccountController REST Controller for GET::findById()..........");
 		Account account = accountService.findById(accountNumber);
 		return new AccountResponseDto(account);
 	}
-	
+
 }

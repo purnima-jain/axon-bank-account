@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>query-model</artifactId>
-	
+
 	<properties>
 		<mysql.version>8.0.20</mysql.version>
 	</properties>
@@ -30,19 +30,19 @@
 			<version>${mysql.version}</version>
 		</dependency>
 		<!-- END: MySQL -->
-		
+
 		<!-- BEGIN: Lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 		</dependency>
 		<!-- END: Lombok -->
-		
+
 		<dependency>
 			<groupId>com.purnima.jain</groupId>
 			<artifactId>coreapi</artifactId>
 			<version>${project.version}</version>
-		</dependency>	
+		</dependency>
 
 	</dependencies>
 

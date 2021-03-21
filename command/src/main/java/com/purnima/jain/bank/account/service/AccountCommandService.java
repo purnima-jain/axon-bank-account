@@ -18,24 +18,24 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class AccountCommandService {
-	
+
 	private final CommandGateway commandGateway;
 
 	public AccountCommandService(CommandGateway commandGateway) {
 		super();
 		this.commandGateway = commandGateway;
 	}
-	
+
 	public CompletableFuture<String> createAccount(AccountCreateDto accountCreateDto) {
 		log.info("Inside the AccountCommandService::createAccount() sending CreateAccountCommand via CommandGateway........");
 		return commandGateway.send(new CreateAccountCommand(UUID.randomUUID().toString(), accountCreateDto.getStartingBalance(), accountCreateDto.getCurrency()));
 	}
-	
+
 	public CompletableFuture<String> creditMoneyToAccount(String accountNumber, MoneyCreditDto moneyCreditDto) {
 		log.info("Inside the AccountCommandService::creditMoneyToAccount() sending CreditMoneyCommand via CommandGateway........");
-		return commandGateway.send(new CreditMoneyCommand(accountNumber, moneyCreditDto.getCreditAmount(), moneyCreditDto.getCurrency()));		
+		return commandGateway.send(new CreditMoneyCommand(accountNumber, moneyCreditDto.getCreditAmount(), moneyCreditDto.getCurrency()));
 	}
-	
+
 	public CompletableFuture<String> debitMoneyFromAccount(String accountNumber, MoneyDebitDto moneyDebitDto) {
 		log.info("Inside the AccountCommandService::debitMoneyFromAccount() sending DebitMoneyCommand via CommandGateway........");
 		return commandGateway.send(new DebitMoneyCommand(accountNumber, moneyDebitDto.getDebitAmount(), moneyDebitDto.getCurrency()));

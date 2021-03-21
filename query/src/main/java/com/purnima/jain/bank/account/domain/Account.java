@@ -6,13 +6,13 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Account {
-	
+
 	private String id;
 
-    private double accountBalance;
+	private double accountBalance;
 
-    private String currency;
+	private String currency;
 
-    private String status;
+	private String status;
 
 }

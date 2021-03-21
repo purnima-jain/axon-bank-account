@@ -20,26 +20,26 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/bank-accounts")
 @Slf4j
 public class AccountCommandController {
-	
+
 	private final AccountCommandService accountCommandService;
 
 	public AccountCommandController(AccountCommandService accountCommandService) {
 		super();
 		this.accountCommandService = accountCommandService;
 	}
-	
+
 	@PostMapping
 	public CompletableFuture<String> createAccount(@RequestBody AccountCreateDto accountCreateDto) {
 		log.info("Inside the AccountCommandController REST Controller for POST::createAccount()..........");
 		return accountCommandService.createAccount(accountCreateDto);
 	}
-	
+
 	@PutMapping(value = "/credits/{accountNumber}")
 	public CompletableFuture<String> creditMoneyToAccount(@PathVariable("accountNumber") String accountNumber, @RequestBody MoneyCreditDto moneyCreditDto) {
 		log.info("Inside the AccountCommandController REST Controller for PUT::creditMoneyToAccount()..........");
 		return accountCommandService.creditMoneyToAccount(accountNumber, moneyCreditDto);
 	}
-	
+
 	@PutMapping(value = "/debits/{accountNumber}")
 	public CompletableFuture<String> debitMoneyToAccount(@PathVariable("accountNumber") String accountNumber, @RequestBody MoneyDebitDto moneyDebitDto) {
 		log.info("Inside the AccountCommandController REST Controller for PUT::debitMoneyToAccount()..........");

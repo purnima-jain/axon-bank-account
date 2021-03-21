@@ -15,14 +15,14 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(value = "/bank-accounts")
 @Slf4j
 public class AccountHistoryController {
-	
+
 	private final AccountHistoryService accountHistoryService;
 
 	public AccountHistoryController(AccountHistoryService accountHistoryService) {
 		super();
 		this.accountHistoryService = accountHistoryService;
 	}
-	
+
 	@GetMapping("/{accountNumber}/history")
 	public List<Object> getHistoryForAccount(@PathVariable(value = "accountNumber") String accountNumber) {
 		log.info("Inside the AccountHistoryController REST Controller for GET::getHistoryForAccount()..........");

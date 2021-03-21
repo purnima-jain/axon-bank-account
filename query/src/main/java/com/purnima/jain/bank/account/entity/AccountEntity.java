@@ -10,14 +10,14 @@ import lombok.Data;
 @Data
 @Table(name = "ACCOUNT")
 public class AccountEntity {
-	
+
 	@Id
-    private String id;
+	private String id;
 
-    private double accountBalance;
+	private double accountBalance;
 
-    private String currency;
+	private String currency;
 
-    private String status;
+	private String status;
 
 }

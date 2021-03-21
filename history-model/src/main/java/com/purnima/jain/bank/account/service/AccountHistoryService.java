@@ -11,8 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class AccountHistoryService {
-	
-	private final EventStore eventStore;	
+
+	private final EventStore eventStore;
 
 	public AccountHistoryService(EventStore eventStore) {
 		super();
