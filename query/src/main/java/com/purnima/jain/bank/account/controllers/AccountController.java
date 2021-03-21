@@ -24,28 +24,9 @@ public class AccountController {
 	
 	@GetMapping("/{accountNumber}")
 	public AccountResponseDto findById(@PathVariable("accountNumber") String accountNumber) {
-		log.info("Inside the AccountQueryController REST Controller for GET::findById()..........");
+		log.info("Inside the AccountController REST Controller for GET::findById()..........");
 		Account account = accountService.findById(accountNumber);
 		return new AccountResponseDto(account);
 	}
 	
-//	@GetMapping("/{accountNumber}/fromQueryGateway")  ---- I am not doing it like this because I want to maintain my own repo
-//	public AccountQueryResponseDto getAccountFromQueryGateway(@PathVariable("accountNumber") String accountNumber) {
-//		Account account = accountQueryService.getAccount(accountNumber);
-//		return new AccountQueryResponseDto(account);
-//	}	
-	
-	
-	
-	// TODO: To implement this, you need EventStore configured, so we will do this a little later
-//	@GetMapping("{accountNumber}/events")
-//	public List<Object> listEventsForAccount(@PathVariable("{accountNumber") String accountNumber) {
-//		return accountQueryService.getAccount(accountNumber);
-//	}
-	
-	//@GetMapping("/{accountNumber}/history") TODO: Very Important
-	//public List<AccountHistoryResponseDto> listHistoryForAccount(PathVariable("accountNumber") String accountNumber) {
-	//	List<>
-	//}
-
 }
