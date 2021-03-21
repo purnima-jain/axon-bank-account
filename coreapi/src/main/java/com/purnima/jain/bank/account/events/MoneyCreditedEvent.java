@@ -1,0 +1,19 @@
+package com.purnima.jain.bank.account.events;
+
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(callSuper = true)
+public class MoneyCreditedEvent extends BaseEvent<String> {
+
+	private final double creditAmount;
+	private final String currency;
+
+	public MoneyCreditedEvent(String id, double creditAmount, String currency) {
+		super(id);
+		this.creditAmount = creditAmount;
+		this.currency = currency;
+	}
+
+}
