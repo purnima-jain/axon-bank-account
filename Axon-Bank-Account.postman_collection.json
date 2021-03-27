@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "7a20c6b8-5331-4967-b36f-6f39341012e9",
+		"name": "Axon-Bank-Account",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create-Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startingBalance\": \"1000\",\r\n    \"currency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find-Account-By-Id-From-Db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts/{accountNumber}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts",
+						"{accountNumber}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Credit-to-Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"creditAmount\": \"50\",\r\n    \"currency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts/credits/{accountNumber}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts",
+						"credits",
+						"{accountNumber}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Debit-from-Account",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"debitAmount\": \"150\",\r\n    \"currency\": \"USD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts/debits/{accountNumber}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts",
+						"debits",
+						"{accountNumber}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Account-History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts/{accountNumber}/history",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts",
+						"{accountNumber}",
+						"history"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Custom-History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/bank-accounts/{accountNumber}/customHistory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"bank-accounts",
+						"{accountNumber}",
+						"customHistory"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
